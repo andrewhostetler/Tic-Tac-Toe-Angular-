@@ -1,0 +1,13 @@
+<div class="game-board">
+  <div *ngFor="let row of grid; index as i" class="row">
+    <span class="box" *ngFor="let col of row; index as j" (click)="onClick(i,j)">
+      <span>{{grid[i][j]}}</span>
+    </span>
+  </div>
+</div>
+
+<div>
+  {{winner}}
+</div>
+
+<button type="button" (click)="reset()">RESET GAME</button>
